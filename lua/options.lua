@@ -10,6 +10,9 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+-- use a big cursor
+vim.opt.guicursor = "n-v-c-i:block"
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -20,10 +23,11 @@ end)
 
 -- Enable break indent
 vim.opt.breakindent = true
-vim.opt.autoindent=true
 vim.opt.shiftwidth=4
 vim.opt.tabstop=4
+vim.opt.softtabstop=0
 vim.opt.expandtab=true
+--vim.opt.cindent=true
 
 -- Save undo history
 vim.opt.undofile = true
