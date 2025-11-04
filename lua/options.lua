@@ -2,7 +2,9 @@
 -- see :help option-list
 
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
+
+vim.opt.wrap = false
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -11,7 +13,7 @@ vim.opt.mouse = 'a'
 vim.opt.showmode = false
 
 -- use a big cursor
-vim.opt.guicursor = "n-v-c-i:block"
+vim.opt.guicursor = 'n-v-c-i:block'
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -23,10 +25,10 @@ end)
 
 -- Enable break indent
 vim.opt.breakindent = true
-vim.opt.shiftwidth=4
-vim.opt.tabstop=4
-vim.opt.softtabstop=0
-vim.opt.expandtab=true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 0
+vim.opt.expandtab = true
 --vim.opt.cindent=true
 
 -- Save undo history

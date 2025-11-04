@@ -11,8 +11,8 @@
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
---  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
---  I don't know why but this makes the tabs buggy...
+  --  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  --  I don't know why but this makes the tabs buggy...
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -20,7 +20,6 @@ require('lazy').setup({
   --
   -- Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
   --
-
 
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
@@ -45,6 +44,8 @@ require('lazy').setup({
 
   require 'kickstart/plugins/treesitter',
 
+  require 'kickstart/plugins/vimtex',
+
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
@@ -59,6 +60,8 @@ require('lazy').setup({
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
+
+  -- require 'kickstart.plugins.obsidian',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
