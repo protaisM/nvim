@@ -180,6 +180,7 @@ return {
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
+        -- pylsp = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -189,7 +190,6 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -205,7 +205,9 @@ return {
           },
         },
       }
-      require'lspconfig'.clangd.setup{}
+      require('lspconfig').clangd.setup {}
+      require('lspconfig').texlab.setup {}
+      require('lspconfig').pylsp.setup {}
 
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
