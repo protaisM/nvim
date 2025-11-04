@@ -205,9 +205,15 @@ return {
           },
         },
       }
-      require('lspconfig').clangd.setup {}
-      require('lspconfig').texlab.setup {}
-      require('lspconfig').pylsp.setup {}
+      -- require('lspconfig').clangd.setup {}
+      -- require('lspconfig').texlab.setup {}
+      -- require('lspconfig').pylsp.setup {}
+      vim.lsp.config('clangd', {})
+      vim.lsp.enable 'clangd'
+      vim.lsp.config('texlab', {})
+      vim.lsp.enable 'texlab'
+      vim.lsp.config('pylsp', {})
+      vim.lsp.enable 'pylsp'
 
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
